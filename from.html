@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>form</title>
+    <link rel="shortcut icon" href="img/logo.gif">
+
+    <link rel="stylesheet" type="text/css" href="index/index.css">
+    <script src="index/index.js"></script>
+    <script src="http://www.jq22.com/jquery/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="index/jquery.min.js"></script>
+    <script type="text/javascript" src="index/vector.js"></script>
+
+</head>
+
+<body>
+    <div class=" form" id="form">
+        <br>
+        <div style=" font-weight: 600;">填写响应信息</div>
+        <hr>
+        <p> <input type="text" id="uid" name="uid" placeholder="学号"></p>
+        <p> <input type="text" name="uname" required="required" placeholder="姓名"></p>
+        <p> <input type="text" name="ucollege" required="required" placeholder="学院"></p>
+        <p> <input type="text" name="umajor" required="required" placeholder="专业"></p>
+        <p>开始日期:<input name="startDate" type="date" placeholder="请输入时间" required="required" /></p>
+        <!-- <input name="startDate" type="datetime-local" step="01" required="required" /> -->
+
+
+        <p>结束日期:<input name="endDate" type="date" required="required" /></p>
+
+
+        <p> <input type="text" name="ureason" required="required" placeholder="请假理由"></p>
+        <p> <input type="text" name="uwhereabouts" required="required" placeholder="去向地址"></p>
+
+        <button  type="button" onclick="toYZDX()">填表后生成数据</button>
+    </div>
+
+</body>
+
+</html>

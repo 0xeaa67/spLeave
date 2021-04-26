@@ -39,3 +39,4 @@ var globalData = {
     // sessionStorage.getItem("startTime"); }, getUserEndTime: function () {
     // return sessionStorage.getItem("endTime"); },
 }
+
