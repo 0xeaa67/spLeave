@@ -24,7 +24,7 @@ button {
     padding-top: 3px;
 }
 .img-div{
-    width: 32%;
+    width: 26%;
     padding-top: 6px;
 
 }
@@ -45,6 +45,16 @@ button {
     left: 0%;
   
     
+}
+.max {
+    width: 100%;
+    height: auto;
+}
+
+.min {
+    width: 28%;
+    padding-top: 6px;
+    height: auto;
 }
 
 

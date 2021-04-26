@@ -12,7 +12,15 @@
     <script src="index/index.js"></script>
     <script type="text/javascript" src="index/jquery.min.js"></script>
     <script type="text/javascript" src="index/vector.js"></script>
+    <script>
+        $(function () {
+            $('#img').click(function () {
 
+                $(this).toggleClass('min');
+                $(this).toggleClass('max');
+            });
+        });
+    </script>
 </head>
 
 <body class="body">
@@ -51,7 +59,7 @@
         <span class="span-div">此页面如有侵犯到您，请邮件<u>be_light@foxmail.com</u></span>
     </div>
     <div>
-        <img class="img-div" src="img/qrcode_0xeaa67.github.io.png">
+        <img id="img" class="min" src="img/qrcode_0xeaa67.github.io.png">
     </div>
     <div class="modal" style="display:none;">
         <p>数据已清除</p>
