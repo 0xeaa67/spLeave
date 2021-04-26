@@ -5,8 +5,6 @@
 >
 
 Leave under some special circumstances.  
-visit: https://yohua.ml/spLeave  
+visit: https://0xeaa67.github.io/spLeave/
 
 ### 二维码地址
-<img src="img/qr.svg" width = "200" height = "200" alt="" align=center />
-<img src="img/qr.png" width = "200" height = "200" alt="" align=center />
