@@ -1,7 +1,16 @@
-button {
-    font-family: 16-apple-system;
+.span-div {
     font-size: 18px;
+}
+
+/* button {
+    font-size: 20px;
     font-weight:400;
+} */
+button {
+    font-size: 20px;
+    font-weight:500;
+    border-radius: 4px;
+
 }
 .title{
     color: orange;
@@ -10,6 +19,7 @@ button {
 }
 .notes{
     color: red;
+    font-size: 18px;
     font-weight:600;
 }
 .form{
@@ -17,4 +27,7 @@ button {
 }
 input {
     font-size: 18px;
+}
+.span-div-email{
+    
 }

@@ -58,37 +58,37 @@
       text-decoration-color: #ff906e;
     }
   </style>
-    <!--导入js文件-->
-    <script src="index/info.js" type="text/javascript" charset="utf-8"></script>
-    <script type="text/javascript">
-        function getUserInfo() {
-            var storage=window.localStorage;
+  <!--导入js文件-->
+  <script src="index/info.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript">
+    function getUserInfo() {
+      var storage = window.localStorage;
 
-            var getUid = "&nbsp;&nbsp;(" + storage.uid + ")";
-            var getUname = storage.uname;
-            document.getElementById('nameAndId').innerHTML = getUname + getUid;
-          
-            //   2020-10-01 09:02:00
-            stTime=Math.floor(Math.random() * (30 - 10)) + 10;
-            endTime=Math.floor(Math.random() * (60 - 40)) + 40;
-            var getStartDate = storage.startDate + " 06:"+stTime+":00";
-            var getEndDate = storage.endDate + " 23:"+endTime+":00";
-            document.getElementById('startDate').innerHTML = getStartDate;
-            document.getElementById('endDate').innerHTML = getEndDate;
+      var getUid = "&nbsp;&nbsp;(" + storage.uid + ")";
+      var getUname = storage.uname;
+      document.getElementById('nameAndId').innerHTML = getUname + getUid;
 
-            document.getElementById('college').innerHTML = storage.ucollege;
-            document.getElementById('major').innerHTML = storage.umajor;
-            document.getElementById('reason').innerHTML = storage.ureason;
-            document.getElementById('whereabouts').innerHTML = storage.uwhereabouts;
+      //   2020-10-01 09:02:00
+      stTime = Math.floor(Math.random() * (30 - 10)) + 10;
+      endTime = Math.floor(Math.random() * (60 - 40)) + 40;
+      var getStartDate = storage.startDate + " 06:" + stTime + ":00";
+      var getEndDate = storage.endDate + " 23:" + endTime + ":00";
+      document.getElementById('startDate').innerHTML = getStartDate;
+      document.getElementById('endDate').innerHTML = getEndDate;
 
-    // // var arr = [ "实验室团日活动",  "实验室团日活动","实验室团日活动",  "实验室团日活动","导师交代任务","导师交代任务","身体不适去医院看病",  "牙疼去医院", "身份证丢失补办", "没有理由", "今天就想去吃南门的煎饼果子", "I want to look at the scenery outside！"];
-    //         //alert(arr[Math.floor((Math.random()*arr.length))]);
-    //         document.getElementById('leaReason').innerHTML = arr[Math.floor((Math.random() * arr.length))];
-        }
-    </script>
+      document.getElementById('college').innerHTML = storage.ucollege;
+      document.getElementById('major').innerHTML = storage.umajor;
+      document.getElementById('reason').innerHTML = storage.ureason;
+      document.getElementById('whereabouts').innerHTML = storage.uwhereabouts;
+
+      // // var arr = [ "实验室团日活动",  "实验室团日活动","实验室团日活动",  "实验室团日活动","导师交代任务","导师交代任务","身体不适去医院看病",  "牙疼去医院", "身份证丢失补办", "没有理由", "今天就想去吃南门的煎饼果子", "I want to look at the scenery outside！"];
+      //         //alert(arr[Math.floor((Math.random()*arr.length))]);
+      //         document.getElementById('leaReason').innerHTML = arr[Math.floor((Math.random() * arr.length))];
+    }
+  </script>
 </head>
 
-<body  onload="getUserInfo()" style="font-size: 36px;" class="yiban_gxnu_edu_cn bv_touch_device"><svg aria-hidden="true"
+<body onload="getUserInfo()" style="font-size: 36px;" class="yiban_gxnu_edu_cn bv_touch_device"><svg aria-hidden="true"
     style="position: absolute; width: 0px; height: 0px; overflow: hidden;">
     <symbol id="icon-chenggong" viewBox="0 0 1024 1024">
       <path
@@ -986,30 +986,32 @@
       <div class="back-campus-read h-100 p-2">
         <p class="mb-1 text-white font-16 font-weight-bold p-1 dxbg-purple">请假条 - 待销假</p>
         <div class="px-1 font-16 bg-white">
-          <p class="mb-1"><span class="font-weight-bold">姓名：</span> <span id="nameAndId"
-            data-v-53f89046=""></span> </p>
-          <p class="mb-1"><span class="font-weight-bold">学院：</span> <span id="college"
-            data-v-53f89046=""></span></p>
-          <p class="mb-1"><span class="font-weight-bold">专业：</span> <span id="major"
-            data-v-53f89046=""></span></p>
-          <p class="mb-1"><span class="font-weight-bold">开始时间：</span> <span id="startDate"
-            data-v-53f89046=""></span></p>
-          <p class="mb-1"><span class="font-weight-bold">结束时间：</span> <span id="endDate"
-            data-v-53f89046=""></span> </p>
-          <p class="mb-1"><span class="font-weight-bold">请假事由：</span> <span 
-            data-v-53f89046=""><span id="reason"></span> </p>
-          <p class="mb-1"><span class="font-weight-bold">去向地址：</span> <span id="whereabouts"
-            data-v-53f89046=""></span> </p>
+          <p class="mb-1"><span class="font-weight-bold">姓名：</span> <span id="nameAndId" data-v-53f89046=""></span> </p>
+          <p class="mb-1"><span class="font-weight-bold">学院：</span> <span id="college" data-v-53f89046=""></span></p>
+          <p class="mb-1"><span class="font-weight-bold">专业：</span> <span id="major" data-v-53f89046=""></span></p>
+          <p class="mb-1"><span class="font-weight-bold">开始时间：</span> <span id="startDate" data-v-53f89046=""></span>
+          </p>
+          <p class="mb-1"><span class="font-weight-bold">结束时间：</span> <span id="endDate" data-v-53f89046=""></span> </p>
+          <p class="mb-1"><span class="font-weight-bold">请假事由：</span> <span data-v-53f89046=""><span id="reason"></span>
+          </p>
+          <p class="mb-1"><span class="font-weight-bold">去向地址：</span> <span id="whereabouts" data-v-53f89046=""></span>
+          </p>
         </div>
-        <div><button type="button" icon="" _type="button" class="dx-btn dx-btn_primary" style="">
+        <div>
+          <button type="button" icon="" _type="button" class="dx-btn dx-btn_primary" style="">
             <!---->销 假
           </button><button type="button" icon="" _type="button" class="dx-btn dx-btn_danger" style="display: none;">
             <!---->取消申请
-          </button><button type="button" icon="" _type="button" class="dx-btn dx-btn_info">
+          </button><button type="button" onclick="backPage()" icon="" _type="button" class="dx-btn dx-btn_info">
             <!---->返 回
-          </button></div>
+          </button>
+        </div>
         <div class="spinner" style="">
-          <div class="rect1 dxbg-purple"></div><div class="rect2 dxbg-purple"></div><div class="rect3 dxbg-purple"></div><div class="rect4 dxbg-purple"></div><div class="rect5 dxbg-purple"></div>
+          <div class="rect1 dxbg-purple"></div>
+          <div class="rect2 dxbg-purple"></div>
+          <div class="rect3 dxbg-purple"></div>
+          <div class="rect4 dxbg-purple"></div>
+          <div class="rect5 dxbg-purple"></div>
         </div>
       </div>
     </div>
@@ -1021,6 +1023,20 @@
   <div class="bv-shadow-dom bv-shadow-dom-fade_out">
     <div class="bv-shadow-dom-container"></div>
   </div>
+
+  <script>
+    (window["webpackJsonp"][0][1]['5cfb'])(window, document);
+    function backYzdx()
+    {
+        window.location.href = "http://yiban.gxnu.edu.cn/yzdx/affairs/leave";
+    }
+    
+    function backPage()
+    {
+        document.getElementsByClassName('header')[0].innerHTML = '请假条-已销假';
+        document.getElementsByClassName('operate')[0].innerHTML = '<p data-v-d4d5c34c="" style="font-size: 18px; color: red; line-height: 1.429;">已销假，不可出校<br data-v-d4d5c34c="">只可在1小时内进校</p><button data-v-d4d5c34c="" type="button" onclick="backYzdx();" icon="" _type="button" class="dx-btn dx-btn_info"><!---->返 回</button>';
+    }
+    </script>
 </body>
 
 </html>
