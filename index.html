@@ -1,233 +1,55 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh">
 
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3W35409RL9"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-3W35409RL9');
-    </script>
-    <!-- baidu -->
-    <script>
-        var _hmt = _hmt || [];
-        (function () {
-            var hm = document.createElement("script");
-            hm.src = "https://hm.baidu.com/hm.js?c6d8a1e33f5af9048c0242a787aaf7d8";
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(hm, s);
-        })();
-    </script>
-    <!-- 百夫长 -->
-    <!-- <script type="text/javascript">
-        (function (w, d, s, a, m) {
-            a = d.createElement(s);
-            a.async = 1;
-            a.src = "//us2.centcount.com/ca.php?sid=2103100000001001&ct=" + (new Date).getTime();
-            m = d.getElementsByTagName(s)[0];
-            m.parentNode.insertBefore(a, m)
-        })(window, document, "script");
-    </script> -->
-
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta http-equiv="content-type" content="text/html;charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>spLeave</title>
     <link rel="shortcut icon" href="img/logo.gif">
 
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="index/index.css">
+    <script src="index/index.js"></script>
     <script src="http://www.jq22.com/jquery/jquery-1.9.1.js"></script>
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/vector.js"></script>
-
-
-    <!--显示时间-->
-    <script type="text/javascript">
-        function startTime() {
-
-            var today = new Date();
-            var y = today.getFullYear();
-            var mo = today.getMonth() + 1;
-            var d = today.getDate();
-            var h = today.getHours();
-            var m = today.getMinutes();
-            var s = today.getSeconds();
-            // 在小于10的数字前加一个‘0’
-            m = checkTime(m);
-            s = checkTime(s);
-            document
-                .getElementById('thisdate')
-                .innerHTML = y + "-" + mo + "-" + d + ":" + h + ":" + m + ":" + s;
-            t = setTimeout(function () {
-                startTime()
-            }, 500);
-        }
-        function checkTime(i) {
-            if (i < 10) {
-                i = "0" + i;
-            }
-            return i;
-        }
-
-        function newToMain() {
-            if (!window.localStorage) {
-                alert("浏览器不支持localstorage");
-            } else {
-                var storage = window.localStorage;
-
-                storage.uid = document.getElementsByName('uid')[0].value;
-                storage.uname = document.getElementsByName("uname")[0].value;
-                storage.startDate = document.getElementsByName("startDate")[0].value;
-                storage.endDate = document.getElementsByName("endDate")[0].value;
-                storage.ucollege = document.getElementsByName("ucollege")[0].value;
-                storage.umajor = document.getElementsByName("umajor")[0].value;
-                storage.ureason = document.getElementsByName("ureason")[0].value;
-                storage.uwhereabouts = document.getElementsByName("uwhereabouts")[0].value;
-
-                window.location.href = "info.html";
-            }
-        }
-        function oldTo() {
-            var storage = window.localStorage;
-            if (typeof (localStorage.uid) == "undefined" || typeof (localStorage.uname) == "undefined" || typeof (localStorage.ucollege) == "undefined" || typeof (localStorage.umajor) == "undefined" || typeof (localStorage.ureason) == "undefined" || typeof (localStorage.uwhereabouts) == "undefined") {
-                var r = confirm("本地数据不完整，是否继续？");
-                if (r == true) {
-                    window.location.href = "info.html";
-                }
-                else {
-                    location.reload();
-                }
-            } else {
-                var today = new Date();
-                var y = today.getFullYear();
-                var mo = today.getMonth() + 1;
-                var d = today.getDate();
-                var h = today.getHours();
-                startDate = y + "/" + mo + "/" + d;
-                endDate = y + "/" + mo + "/" + (d + 1);
-
-
-                window.localStorage.startDate = startDate;
-                window.localStorage.endDate = endDate;
-
-                window.location.href = "info.html";
-            }
-        }
-        function clearlocalStorage() {
-            window.localStorage.clear();
-            showMessage();
-        }
-        function showMessage(data) {
-            $('.modal').html(data);
-            $('.modal').fadeIn();
-            setTimeout(function () {
-                $('.modal').fadeOut();
-            }, 2000);
-        };
-        $(':input').click(function () {
-            var text = $(this).val();
-            showMessage(text);
-        });
-    </script>
-
+    <script type="text/javascript" src="index/jquery.min.js"></script>
+    <script type="text/javascript" src="index/vector.js"></script>
 
 </head>
 
-<body onload="startTime()" align="center">
-
-    <div id="container">
-        <div id="output">
-            <div class="containerT">
-                <!-- <div class="prompt"></div> -->
-                <p id="thisdate"></p>
-                <div style="margin: 1%;">
-                    <span>注意信息真实性,建议在易班中打开</span>
-                </div>
-            </div>
-
-
-
-            <div style=" text-align: center; font-weight: 700;" ;">******第二次使用******</div>
-            <button class="button-clear" type="button" onclick="clearlocalStorage()">清除本地存储数据</button>
-            <br>
-            <button class="button-old" type="button" onclick=" oldTo()">使用旧数据生成</button>
-            <br>
-           
-
-            <div class=" form" id="form">
-                <div style=" text-align: center;font-weight: 700;">******第一次使用******</div>
-                <p> <input type="text" id="uid" name="uid" placeholder="学号"></p>
-                <p> <input type="text" name="uname" required="required" placeholder="姓名"></p>
-                <p> <input type="text" name="ucollege" required="required" placeholder="学院"></p>
-                <p> <input type="text" name="umajor" required="required" placeholder="专业"></p>
-                <p>开始日期:<input name="startDate" type="date" placeholder="请输入时间" required="required" /></p>
-                <!-- <input name="startDate" type="datetime-local" step="01" required="required" /> -->
-
-
-                <p>结束日期:<input name="endDate" type="date" required="required" /></p>
-
-
-                <p> <input type="text" name="ureason" required="required" placeholder="请假理由"></p>
-                <p> <input type="text" name="uwhereabouts" required="required" placeholder="去向地址"></p>
-
-                <button class="button-new" type="button" onclick="newToMain()">填表后生成数据</button>
-            </div>
-            
-            <br>
-            <!--<div align="center"><img src="img/qr.svg" style="width:30%"></div>-->
-            <!-- <a href="https://github.com/Colflip/spLeave" "> -->
-             <!--<div class="bottomUrl">
-                <a href="https://github.com/Colflip/spLeave"><img align="center" src="img/logo.gif"
-                        style="height: 20px;"></a> | <a href="https://github.com/Colflip/spLeave/issues">issues</a> | <a href="  https://github.com/Colflip/tempReport">体温上报脚本</a>
-            </div> -->
-                 <div class="bottomUrl">
-               如果此页面有侵犯到您，请邮件be_light@foxmail.com
-            </div>
-              
-        </div>
+<body>
+    <div>
+        <span class="title">spLeave</span> <span> --a leave under some special circumstances</span>
+        <Br><span class="notes">注意信息真实性,建议在易班中打开</span>
+        <hr>
     </div>
-
-    <div class="modal" style="display:none;">
-        <p>数据已清除</p>
+    <div>
+        <button class="button" type="button" onclick="ClearLocal()">清除缓存</button>
+        <span>删除本地缓存数据</span>
+        <hr>
     </div>
-    <!--图片放大后的div 开始  这块粘贴在你的html中最后body前 -->
-    <div id="outerdiv"
-        style="text-align: center;position: fixed;z-index: 9999;top: 0;left: 0;width: 100%;height: 100%;background-color: rgba(28,28,28,0.9);display:none;">
-        <img id="bigimg"
-            style="max-height: 800px;max-width: 100%;border: 0;     margin: auto;position: absolute;top: 0;bottom: 0;left: 0;right: 0;"
-            src="" />
+    <div>
+        <button type="button" onclick="Random()">随机生成</button>
+        <span>使用随机数据生成</span>
+        <hr>
     </div>
-
-    <!--js开始 是放大点击的触发事件 这块粘贴在你的html中最后body前 需要依赖jquery-->
-    <script type="text/javascript">
-        //图片放大  
-        $("#outerdiv").hide();
-        $(function () {
-            $("img").mouseover(function () {
-                $(this).css("cursor", "pointer");
-            });
-
-            $("img").click(function () {
-                var _this = $(this);//将当前的pimg元素作为_this传入函数    
-                imgShow("#outerdiv", "#bigimg", _this);
-            });
-        });
-
-        function imgShow(outerdiv, bigimg, _this) {
-            var src = _this.attr("src");//获取当前点击的pimg元素中的src属性    
-            $('#outerdiv').attr('display', 'block');
-            $(bigimg).attr("src", src);//设置#bigimg元素的src属性    
-            $(outerdiv).fadeIn("fast");
-        }
-        $(outerdiv).click(function () {//再次点击淡出消失弹出层    
-            $(this).fadeOut("fast");
-        });
-    </script>
-
+    <div>
+        <button class="button" type="button" onclick=" oldTo()">本地生成</button>
+        <span>使用上次填写数据生成</span>
+        <hr>
+    </div>
+    <div>
+        <button type="button" onclick="newToYZDX()">填写信息</button>
+        <span>填写数据后生成</span>
+        <hr>
+    </div>
+    <div>
+        <!-- <a href="https://github.com/0xeaa67/spLeave"><img src="img/logo.gif"></a>--> | <a
+            href="https://github.com/0xeaa67/spLeave/issues">提交issues</a> | <a
+            href="  https://github.com/0xeaa67/tempReport">体温上报脚本</a>
+    </div>
+    <div class="bottomUrl">
+        <span>此页面如有侵犯到您，请邮件be_light@foxmail.com</span>
+    </div>
 </body>
 
 </html>
