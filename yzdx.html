@@ -59,7 +59,10 @@
     }
   </style>
   <!--导入js文件-->
+  <script type="text/javascript" src="index/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="index/index.css">
   <script src="index/info.js" type="text/javascript" charset="utf-8"></script>
+  <script src="index/index.js" type="text/javascript" charset="utf-8"></script>
   <script type="text/javascript">
     function getUserInfo() {
       var storage = window.localStorage;
@@ -998,20 +1001,16 @@
           </p>
         </div>
         <div>
-          <button type="button" icon="" _type="button" class="dx-btn dx-btn_primary" style="">
+          <button type="button" onclick="backPage()" icon="" _type="button" class="dx-btn dx-btn_primary" style="">
             <!---->销 假
           </button><button type="button" icon="" _type="button" class="dx-btn dx-btn_danger" style="display: none;">
             <!---->取消申请
-          </button><button type="button" onclick="backPage()" icon="" _type="button" class="dx-btn dx-btn_info">
+          </button><button type="button" onclick="backYzdx()" icon="" _type="button" class="dx-btn dx-btn_info">
             <!---->返 回
           </button>
         </div>
         <div class="spinner" style="">
-          <div class="rect1 dxbg-purple"></div>
-          <div class="rect2 dxbg-purple"></div>
-          <div class="rect3 dxbg-purple"></div>
-          <div class="rect4 dxbg-purple"></div>
-          <div class="rect5 dxbg-purple"></div>
+          <div class="rect1 dxbg-purple"></div><div class="rect2 dxbg-purple"></div><div class="rect3 dxbg-purple"></div><div class="rect4 dxbg-purple"></div><div class="rect5 dxbg-purple"></div>
         </div>
       </div>
     </div>
@@ -1023,20 +1022,7 @@
   <div class="bv-shadow-dom bv-shadow-dom-fade_out">
     <div class="bv-shadow-dom-container"></div>
   </div>
-
-  <script>
-    (window["webpackJsonp"][0][1]['5cfb'])(window, document);
-    function backYzdx()
-    {
-        window.location.href = "http://yiban.gxnu.edu.cn/yzdx/affairs/leave";
-    }
-    
-    function backPage()
-    {
-        document.getElementsByClassName('header')[0].innerHTML = '请假条-已销假';
-        document.getElementsByClassName('operate')[0].innerHTML = '<p data-v-d4d5c34c="" style="font-size: 18px; color: red; line-height: 1.429;">已销假，不可出校<br data-v-d4d5c34c="">只可在1小时内进校</p><button data-v-d4d5c34c="" type="button" onclick="backYzdx();" icon="" _type="button" class="dx-btn dx-btn_info"><!---->返 回</button>';
-    }
-    </script>
+  <div class="read-later-alert" style="display:none">已销假</div>
 </body>
 
 </html>

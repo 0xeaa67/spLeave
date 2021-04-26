@@ -28,6 +28,25 @@ button {
     padding-top: 6px;
 
 }
+.modal {
+    position: fixed;
+    z-index: 99999;
+    background-color: rgb(0, 0, 0, 0.5);
+    border: 2px solid red;
+    border-radius: 26px;
+    width: 180px;
+    height: 40px;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    display: none;
+    /* line-height: 50px; */
+    top:0;
+    left: 0%;
+  
+    
+}
+
 
 /* form html */
 .form{
@@ -35,4 +54,20 @@ button {
 }
 input {
     font-size: 18px;
+}
+
+/* yzdx html */
+.read-later-alert {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    background: rgba(48, 48, 48, 0.8);
+    padding: 10px;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    color: #fff;
+    position: fixed;
+    display: none;
+    text-align: center;
+    z-index: 9999;
 }

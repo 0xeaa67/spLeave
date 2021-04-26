@@ -1,11 +1,24 @@
+
+function ClearLocal() {
+    window.localStorage.clear();
+    showMessage();
+}
+function showMessage(data) {
+    $('.modal').html(data);
+    $('.modal').fadeIn();
+    setTimeout(function () {
+        $('.modal').fadeOut();
+    }, 2000);
+};
+
 function goDate() {
     var today = new Date();
     var y = today.getFullYear();
     var mo = today.getMonth() + 1;
     var d = today.getDate();
     var h = today.getHours();
-    if(mo<10)
-        mo="0"+mo;
+    if (mo < 10)
+        mo = "0" + mo;
     startDate = y + "-" + mo + "-" + d;
     endDate = y + "-" + mo + "-" + (d);
     var res = new Array(startDate, endDate);
@@ -50,25 +63,20 @@ function oldTo() {
             location.reload();
         }
     } else {
-        var today = new Date();
-        var y = today.getFullYear();
-        var mo = today.getMonth() + 1;
-        var d = today.getDate();
-        var h = today.getHours();
-        startDate = y + "/" + mo + "/" + d;
-        endDate = y + "/" + mo + "/" + (d + 1);
+        res = goDate();
 
-
-        window.localStorage.startDate = startDate;
-        window.localStorage.endDate = endDate;
+        window.localStorage.startDate = res[0];
+        window.localStorage.endDate = res[1];
 
         window.location.href = "yzdx.html";
     }
 }
-function newToYZDX() {
-    window.location.href = "from.html";
+function toForm() {
+    window.location.href = "form.html";
 }
 
+
+// form html
 function toYZDX() {
     if (!window.localStorage) {
         alert("浏览器不支持localstorage");
@@ -88,18 +96,39 @@ function toYZDX() {
     }
 }
 
-function ClearLocal() {
-    window.localStorage.clear();
-    showMessage();
+// yzdx html
+
+function backYzdx() {
+    // setTimeout(function (){
+    // }, 15000);
+    window.location.href = "http://yiban.gxnu.edu.cn/yzdx/affairs/leave";
 }
-function showMessage(data) {
-    $('.modal').html(data);
-    $('.modal').fadeIn();
+
+function backPage() {
+    // document.getElementsByClassName('header')[0].innerHTML = '请假条-已销假';
+    // document.getElementsByClassName('operate')[0].innerHTML = '<p data-v-d4d5c34c="" style="font-size: 18px; color: red; line-height: 1.429;">已销假，不可出校<br data-v-d4d5c34c="">只可在1小时内进校</p><button data-v-d4d5c34c="" type="button" onclick="backYzdx();" icon="" _type="button" class="dx-btn dx-btn_info"><!---->返 回</button>';
+    showInfo();
+    // setTimeout(function (){
+    // }, 15000);
+
+    // backYzdx();
+}
+
+function showInfo() {
+    $('.read-later-alert').html();
+    $('.read-later-alert').fadeIn();
     setTimeout(function () {
-        $('.modal').fadeOut();
-    }, 2000);
-};
-$(':input').click(function () {
-    var text = $(this).val();
-    showMessage(text);
-});
+        $('.read-later-alert').hide();
+        window.location.href = "http://yiban.gxnu.edu.cn/yzdx/affairs/leave";
+    }, 500);
+
+
+
+    // $(document).on("click", ".dx-btn_primary", function (event) {
+    //     $(".read-later-alert").show();
+    //     set_id = setTimeout(function () {
+    //         $(".read-later-alert").hide()
+    //         window.location.href="http://yiban.gxnu.edu.cn/yzdx/affairs/leave";
+    //     }, 3000);
+    // });
+}
