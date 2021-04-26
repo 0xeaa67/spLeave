@@ -6,6 +6,7 @@ button {
     font-size: 20px;
     font-weight:500;
     border-radius: 4px;
+    background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
 
 }
 .title{
