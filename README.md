@@ -7,6 +7,6 @@
 Leave under some special circumstances.
 visit: https://0xeaa67.github.io/spLeave/
 
-### 二维码地址
+## 二维码地址
 
 ![qr](img/qrcode_0xeaa67.github.io.png)
