@@ -2,10 +2,6 @@
     font-size: 18px;
 }
 
-/* button {
-    font-size: 20px;
-    font-weight:400;
-} */
 button {
     font-size: 20px;
     font-weight:500;
@@ -22,12 +18,20 @@ button {
     font-size: 18px;
     font-weight:600;
 }
+
+.bottom-div{
+    padding-top: 3px;
+}
+.img-div{
+    width: 32%;
+    padding-top: 6px;
+
+}
+
+/* form html */
 .form{
     font-size: 18px;
 }
 input {
     font-size: 18px;
-}
-.span-div-email{
-    
 }
