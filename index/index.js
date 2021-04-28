@@ -5,10 +5,12 @@ var _hmt = _hmt || [];
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
 })();
+
 function ClearLocal() {
     window.localStorage.clear();
     showMessage();
 }
+
 function showMessage(data) {
     $('.modal').html(data);
     $('.modal').fadeIn();
