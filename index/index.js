@@ -1,9 +1,9 @@
 var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?e481c82c183866bf90dfb5cc388c27ce";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
+(function () {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?e481c82c183866bf90dfb5cc388c27ce";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
 })();
 
 function ClearLocal() {
@@ -38,8 +38,8 @@ function randomn(n) {
     return parseInt((Math.random() + 1) * Math.pow(10, n - 1))
 }
 function Random() {
-    var lastname=[ "赵", "钱","孙", "李","周","吴", "郑", "王","冯","陈","楚","魏"];
-    var name = ["孟洵", "哉予", "期良", "君止", "子邦", "维其", "须悠", "良之", "之怀", "之功", "行露", "皋野"];
+    var lastname = ["赵", "钱", "孙", "李", "周", "吴", "郑", "王", "冯", "陈", "楚", "魏"];
+    var name = ["孟洵", "哉予", "期良", "君止", "子邦", "维其", "须悠", "良之", "之怀", "之功", "行露", "皋野", "皋野", "远致", "革有", "振于", "陈夏", "黍与"];
     var number = ["2020", "2019", "2018"];
     var college = ["计算机科学与工程学院/软件学院"];
     var major = ["电子信息", "软件工程", "计算机科学与技术"];
@@ -48,7 +48,7 @@ function Random() {
     res = goDate();
 
     storage.uid = number[Math.floor((Math.random() * number.length))] + randomn(3) + randomn(3);
-    storage.uname = lastname[Math.floor((Math.random() * name.length))]+name[Math.floor((Math.random() * name.length))];
+    storage.uname = lastname[Math.floor((Math.random() * name.length))] + name[Math.floor((Math.random() * name.length))];
     storage.startDate = res[0];
     storage.endDate = res[1];
     storage.ucollege = college;
