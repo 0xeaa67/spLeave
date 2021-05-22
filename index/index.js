@@ -50,7 +50,7 @@ function Random() {
     storage.uname = name[Math.floor((Math.random() * name.length))];
     storage.startDate = res[0];
     storage.endDate = res[1];
-    storage.ucollege = "计算机科学与信息工程学院";
+    storage.ucollege = "计算机科学与工程学院";
     storage.umajor = major[Math.floor((Math.random() * major.length))];
     storage.ureason = reason[Math.floor((Math.random() * reason.length))];
     storage.uwhereabouts = "桂林";
