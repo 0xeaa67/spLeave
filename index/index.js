@@ -40,7 +40,7 @@ function randomn(n) {
 function Random() {
     var name = ["李孟洵", "李哉予", "李期良", "李君止", "赵子邦", "赵维其", "孙须悠", "周良之", "周之怀", "郑之功", "郑行露", "王皋野"];
     var number = ["2020", "2019", "2018"];
-    var college = ["计算机科学与信息工程学院"];
+    var college = ["计算机科学与工程学院"];
     var major = ["电子信息", "软件工程", "计算机科学与技术"];
     var reason = ["实验室团日活动", "实验室团日活动", "实验室团日活动", "实验室团日活动", "导师交代任务", "导师交代任务", "身体不适去医院看病", "牙疼去医院", "身份证丢失补办", "没有理由", "今天就想去吃南门的煎饼果子", "I want to look at the scenery outside！"];
     var storage = window.localStorage;
