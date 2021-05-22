@@ -48,7 +48,7 @@ function Random() {
     res = goDate();
 
     storage.uid = number[Math.floor((Math.random() * number.length))] + randomn(3) + randomn(3);
-    storage.uname = lastname[Math.floor((Math.random() * name.length))] + name[Math.floor((Math.random() * name.length))];
+    storage.uname = lastname[Math.floor((Math.random() * lastname.length))] + name[Math.floor((Math.random() * name.length))];
     storage.startDate = res[0];
     storage.endDate = res[1];
     storage.ucollege = college;
