@@ -8,3 +8,15 @@ Leave under some special circumstances.
 visit: https://yohua.ml/spLeave/
 
 ## 🎉️二维码地址
+
+<table>
+<tr>
+<td><img width="256" src="img/logo.gif" /></td>
+<td><img width="256" src="img/qrcode_yohua.ml.png" /></td>
+<td><img width="256" src="img/qrcode_0xeaa67.github.io.png" /></td>
+</tr>
+</table>
+
+
+
+[Leave me a message](https://github.com/colflip/buy-me-a-coffee/issues/new)
