@@ -17,6 +17,4 @@ visit: https://yohua.ml/spLeave/
 </tr>
 </table>
 
-
-
-[Leave me a message](https://github.com/colflip/buy-me-a-coffee/issues/new)
+[Leave me a message](https://github.com/colflip/spleave/issues/new)
