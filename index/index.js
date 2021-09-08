@@ -39,8 +39,8 @@ function randomn(n) {
 }
 function Random() {
     var lastname = ["赵", "钱", "孙", "李", "周", "吴", "郑", "王", "冯", "陈", "楚", "魏"];
-    var name = ["孟洵", "哉予", "期良", "君止", "子邦", "维其", "须悠", "良之", "之怀", "之功", "行露", "皋野", "皋野", "远致", "革有", "振于", "陈夏", "黍与"];
-    var number = ["2020", "2019", "2021"];
+    var name = ["行露", "皋野", "皋野", "远致", "革有", "振于", "陈夏", "孟洵", "哉予", "期良", "君止", "子邦", "维其", "须悠", "良之", "之怀", "之功", "黍与"];
+    var number = ["2019", "2020", "2020"];
     var college = ["计算机科学与工程学院/软件学院"];
     // var college = ["计算机科学与工程学院"];
     var major = ["电子信息", "软件工程", "计算机科学与技术"];
@@ -48,7 +48,7 @@ function Random() {
     var storage = window.localStorage;
     res = goDate();
 
-    storage.uid = number[Math.floor((Math.random() * number.length))] + randomn(3) + randomn(3);
+    storage.uid = number[Math.floor((Math.random() * number.length))] + "010" + randomn(3);
     storage.uname = lastname[Math.floor((Math.random() * lastname.length))] + name[Math.floor((Math.random() * name.length))];
     storage.startDate = res[0];
     storage.endDate = res[1];
