@@ -55,7 +55,7 @@ function Random() {
     storage.ucollege = college;
     storage.umajor = major[Math.floor((Math.random() * major.length))];
     storage.ureason = reason[Math.floor((Math.random() * reason.length))];
-    storage.uwhereabouts = "桂林";
+    storage.uwhereabouts = "广西壮族自治区/桂林市/市辖区/桂林";
 
     window.location.href = "yzdx.html";
 }
