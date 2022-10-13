@@ -5,7 +5,7 @@
 > * 作者不承担任何法律责任！The author assumes no legal liability！
 
 Leave under some special circumstances.
-visit: https://yohua.ml/spLeave/
+visit: https://sd78c.github.io/spLeave/
 
 ## 🎉️二维码地址
 
